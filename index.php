@@ -1,30 +1,30 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
    <style>
-    body {
+      body {
             background-color: rgba(0, 0, 0, 0.8);
             display: flexbox;
             margin: 10px;          
 
+          }
+          section{
+            border: 1px;
+            border-radius: 2ex;
+            max-width: 200px;
+            background-color: rgba(0, 200, 0, 0.8);
+            margin: 20px;
+            text-align: center;
         }
-        section{
-        border: 1px;
-        border-radius: 2ex;
-        max-width: 200px;
-        background-color: rgba(0, 200, 0, 0.8);
-        margin: 20px;
-        text-align: center;
-      }
-      .sub{
-        border-radius: 3ex;
-        background-color: rgba(200, 30, 0);
-        margin: 20;
-      }
+        .sub{
+            border-radius: 3ex;
+            background-color: rgba(200, 30, 0);
+            margin: 20;
+        }
    </style>
 </head>
 <body>   
@@ -42,7 +42,6 @@
       <input Class="sub" type="submit" value="Izvadīt rezultātu"><br><br>
     </section>
       <!-- // Ievades forma -->
-
 </body>
 </html>
 <?php
@@ -58,7 +57,6 @@ if (isset($_POST["vārds"]) && isset($_POST["rez1"]) && isset($_POST["rez2"]) &&
   $max = max($score1, $score2, $score3);
   // Maksimālā vērtība
 
-
   echo "<section>";
   echo "Spēlētājs: <br>" . $name . "<br>";
   echo "Rezultāts 1: <br>" . $score1 . "<br>";
@@ -73,4 +71,5 @@ if (isset($_POST["vārds"]) && isset($_POST["rez1"]) && isset($_POST["rez2"]) &&
   echo "</section>";
 }
 // Izvadīt rezultātus
+
 ?>
