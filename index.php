@@ -20,26 +20,27 @@
         <input type="text" name="rez3"><br><br>
         <input type="submit" value="Izvadīt rezultātu"><br><br>
       <!-- // Ievades forma -->
-
 </body>
 </html>
 <?php
-$name = $_POST["vārds"];
-$score1 = $_POST["rez1"];
-$score2 = $_POST["rez2"];
-$score3 = $_POST["rez3"];
-// Mainīgie
-
-$ave = ($score1 + $score2 + $score3) / 3;
-// Vidējā vērtība
-$max = max($score1, $score2, $score3);
-// Maksimālā v;ert;iba
-
-echo "Spēlētājs: " . $name . "<br>";
-echo "Rezultāts 1: " . $score1 . "<br>";
-echo "Rezultāts 2: " . $score2 . "<br>";
-echo "Rezultāts 3: " . $score3 . "<br>";
-echo "Vidējais rezultāts: " . $ave . "<br>";
-echo "Augstākais rezultāts: " . $max . "<br>";
-// Izvadīt rezultātus
+if (isset($_POST["vārds"]) && isset($_POST["rez1"]) && isset($_POST["rez2"]) && isset($_POST["rez3"])) {
+  $name = $_POST["vārds"];
+  $score1 = $_POST["rez1"];
+  $score2 = $_POST["rez2"];
+  $score3 = $_POST["rez3"];
+  // Mainīgie
+  $ave = ($score1 + $score2 + $score3) / 3;
+  // Vidējā vērtība
+  $max = max($score1, $score2, $score3);
+  // Maksimālā vērtība
+  echo "Spēlētājs: " . $name . "<br>";
+  echo "Rezultāts 1: " . $score1 . "<br>";
+  echo "Rezultāts 2: " . $score2 . "<br>";
+  echo "Rezultāts 3: " . $score3 . "<br>";
+  echo "Vidējais rezultāts: " . $ave . "<br>";
+  echo "Augstākais rezultāts: " . $max . "<br>";
+}else{
+  echo "Lūdzu ievadiet datus";
+}
+// Izvades rezultāti
 ?>
